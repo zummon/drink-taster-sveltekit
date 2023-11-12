@@ -9,4 +9,5 @@
 <svelte:body style={`background-image: url(${cover.src});`}></svelte:body>
 
 <div class="">
+	<slot />
 </div>

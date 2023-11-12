@@ -5,13 +5,13 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	kit: {
 		adapter: adapter(),
-		extensions: ['.svelte', '.md', '.svx'],
-		preprocess: [
-			mdsvex({
-				extensions: ['.md', '.svx'],
-			}),
-		],
-	}
+	},
+	extensions: ['.svelte', '.md', '.svx'],
+	preprocess: [
+		mdsvex({
+			extensions: ['.md', '.svx'],
+		}),
+	],
 };
 
 export default config;
