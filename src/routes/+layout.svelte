@@ -1,12 +1,12 @@
 <script>
 	import '../app.css';
-	import {onMount} from 'svelte'
 
-	onMount(() => {
-    document.body.style.backgroundImage = `url(${cover.src})`;
-
-	})
+	cover = {
+		src: 'https://images.unsplash.com/photo-1512997016904-92f9aa74d777?w=1920'
+	}
 </script>
+
+<svelte:body style={`background-image: url(${cover.src});`}></svelte:body>
 
 <div class="">
 </div>
