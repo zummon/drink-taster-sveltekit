@@ -12,6 +12,6 @@ export const load = async () => {
 			src: 'https://images.unsplash.com/photo-1512997016904-92f9aa74d777?w=1920',
 			alt: 'coffee',
 		},
-		blogs: await getBlogs().slice(0, 2),
+		blogs: (await getBlogs()).slice(0, 2),
 	}
 }
