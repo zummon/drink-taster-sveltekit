@@ -1,9 +1,9 @@
-import { getContent } from "../../../lib/getBlogs";
+import { getBlog } from "../../../lib/getBlogs";
 
 export const prerender = true;
 
 export const load = async ({ params }) => {
-	let md = await getContent(`blog/${params.slug}`)
+	let md = await getBlog(params.slug)
 
 	return {
 		...md

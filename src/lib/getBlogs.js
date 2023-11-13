@@ -20,8 +20,8 @@ export const getBlogs = async () => {
 	return result;
 };
 
-export const getContent = async (file) => {
-	let markdown = await import(`./content/${file}.md`)
+export const getBlog = async (file) => {
+	let markdown = await import(`./content/blog/${file}.md`)
 
 	let content = markdown.default;
 	let metadata = markdown.metadata;

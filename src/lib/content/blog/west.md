@@ -14,7 +14,7 @@ title: West. Lorem, ipsum dolor.
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, nesciunt, eveniet excepturi voluptatibus maxime earum doloremque accusamus quia, consectetur optio tempore voluptas hic. Veniam voluptatibus, numquam quaerat nulla obcaecati dolor.
 
 - [Hyperlink](https://example.com/)
-- [Jump](#)
+- [Jump](/#)
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores laudantium autem ducimus eligendi repellendus sequi repellat suscipit id voluptas doloremque nam cum ipsam dolor illum error, rem iure, cumque inventore.
 
