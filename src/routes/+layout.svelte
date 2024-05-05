@@ -3,9 +3,9 @@
 
 	export let data
 
-	let showMenu = false
 	let navs = [
 		{path:'/about',text:'About'},
+		{path:'/product',text:'Product'},
 		{path:'/blog',text:'Blog'},
 	]
 </script>
@@ -15,29 +15,19 @@
 	<div
 		class="py-3 px-4"
 	>
-		<a class="text-lg font-semibold" href="/">
+		<a class="transition duration-500 text-lg {data.pathname == '/' ? '':'font-semibold hover:bg-white focus:bg-white'}" href="/">
 			{data.siteName}
 		</a>
 	</div>
-	<div class="py-3 px-4">
-		<details open>
-			<summary class="list-none cursor-pointer">
-				<!-- heroicons micro bars-3 -->
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="ml-auto w-7 h-7">
-					<path fill-rule="evenodd" d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-				</svg>				
-			</summary>
-			<div class="sm:flex gap-3 mt-3">
-				{#each navs as item }
-					<a
-						class="block hover:bg-white focus:bg-white transition duration-500 text-lg font-semibold py-2 px-2"
-						href={item.path}
-					>
-						{item.text}
-					</a>
-				{/each}
-			</div>
-		</details>
+	<div class="py-3 px-4 flex flex-wrap gap-3">
+		{#each navs as item }
+			<a
+				class="transition duration-500 text-lg {data.pathname.startsWith(item.path) ? 'border-b border-current':'font-semibold hover:bg-white focus:bg-white'}"
+				href={item.path}
+			>
+				{item.text}
+			</a>
+		{/each}
 	</div>
 </div>
 
